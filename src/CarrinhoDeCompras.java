@@ -34,9 +34,13 @@ public class CarrinhoDeCompras {
 
         Double total = 0.0;
 
-        for (int i = 0; i < carrinhoDeCompras.size(); i++) {
+        if (!carrinhoDeCompras.isEmpty()) {
 
-            total += carrinhoDeCompras.get(i).getPreco() * carrinhoDeCompras.get(i).getQuantidade();
+            for (int i = 0; i < carrinhoDeCompras.size(); i++) {
+
+                total += carrinhoDeCompras.get(i).getPreco() * carrinhoDeCompras.get(i).getQuantidade();
+
+            }
 
         }
 
@@ -48,7 +52,5 @@ public class CarrinhoDeCompras {
 
         System.out.println(carrinhoDeCompras);
     }
-
-
 
 }
